@@ -1,10 +1,10 @@
 @extends('layouts.main')
 
-@section('title', 'HDC Events')
+@section('title', 'Contacts')
 
 @section('content')
 
-    <h1>Tela de bem-vindo</h1>
+    <h1>Tela de contatos</h1>
     <img src="/img/banner.jpg" alt="Banner">
     
 @endsection

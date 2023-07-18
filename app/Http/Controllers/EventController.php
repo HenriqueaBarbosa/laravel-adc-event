@@ -11,7 +11,7 @@ class EventController extends Controller {
     }
 
     public function create() {
-        return view('event.create');
+        return view('events.create');
     }
 
     public function contact() {

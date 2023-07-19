@@ -121,6 +121,20 @@
     font-size: 0.875rem; /* 14px converted to rem */
     color: #757575;
   }
+
+  /* Event create page */
+  #event-create-container label {
+    font-weight: bold;
+  }
+  #event-create-container {
+    padding: 1.875rem; /* 30px converted to rem */
+  }
+
+  #event-create-container input,
+  #event-create-container select,
+  #event-create-container textarea {
+    font-size: 0.75rem /* 12px converted to rem */
+  }
   
   /* footer */
   footer {

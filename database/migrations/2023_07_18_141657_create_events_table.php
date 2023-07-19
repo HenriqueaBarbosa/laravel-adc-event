@@ -29,3 +29,6 @@ return new class extends Migration
         Schema::dropIfExists('events');
     }
 };
+
+// php artisan make:migration create_events_table
+// php artisan migrate

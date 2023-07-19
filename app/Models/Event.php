@@ -9,3 +9,4 @@ class Event extends Model
 {
     use HasFactory;
 }
+// php artisan make:model Event

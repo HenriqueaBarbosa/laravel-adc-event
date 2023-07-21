@@ -10,9 +10,15 @@
 @endsection
 
 <!-- history{
-   7 php artisan make:controller EventController
-   8 php artisan make:controller contact
-   9 php artisan make:controller products
+  1 composer create-project --prefer-dist laravel/laravel hdcevents
+  2 git add .
+  3 git commit -m 'feat: adc some routes'
+  4 git push -u origin main
+  5 git add .
+  6 git commit -m 'feat: adc navbar main'
+  7 php artisan make:controller EventController
+  8 php artisan make:controller contact
+  9 php artisan make:controller products
   10 php artisan make:controller product
   11 git add .
   12 git commit -m 'feat: adc make controllers'
@@ -45,4 +51,14 @@
   39 git commit -m 'feat: create data'
   40 php artisan make:migration add_image_to_events_table
   41 php artisan migrate
+  42 history
+  43 git add .
+  44 git commit -m 'feat: img persistence'
+  45 git push
+  46 php artisan migrate
+  47 php artisan make:migration add_items_to_event_table
+  48 php artisan migrate
+  49 git add .
+  50 git commit -m 'feat: adc json collumn'
+  51 git push
 } -->

@@ -6,7 +6,7 @@
 
     <div id="event-create-container" class="col-md6 offset-md-3">
         <h1>Crie o seu evento</h1>
-        <form action="/events" method="POST">
+        <form action="/events" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <label for="image">Imagem do evento:</label>
@@ -28,9 +28,28 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="title">Evento:</label>
+                <label for="title">Description:</label>
                 <textarea name="description" id="description" class="form-control" placeholder="O que vai acontecer no evento?"></textarea>
             </div>
+            <div class="form-group">
+                <label for="title">Adicione itens de infraestrutura:</label>
+                <div class="form-group">	
+                    <input type="checkbox" name="items[]" value="Cadeiras"> Cadeiras
+                </div>
+                <div class="form-group">	
+                    <input type="checkbox" name="items[]" value="Palco"> Palco
+                </div>
+                <div class="form-group">	
+                    <input type="checkbox" name="items[]" value="Cerveja grátis"> Cerveja grátis
+                </div>
+                <div class="form-group">	
+                    <input type="checkbox" name="items[]" value="Open Food"> Open food
+                </div>
+                <div class="form-group">	
+                    <input type="checkbox" name="items[]" value="Brindes"> Brindes
+                </div>
+            </div>
+                
             <input type="submit" value="Criar Evento" class="btn btn-primary">
         </form>
     </div>

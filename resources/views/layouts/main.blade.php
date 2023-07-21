@@ -11,6 +11,7 @@
         <title>@yield('title')</title>
         <link rel="stylesheet" href="/css/styles.css">
         <script src="/js/scripts.js"></script>
+        <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </head>
     <body class="antialiased">
         <header>
@@ -49,6 +50,6 @@
         <footer>
             <p>HDC Events &copy; 2023</p>
         </footer>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        
     </body>
 </html>

@@ -14,3 +14,13 @@ Route::get('/contact', [EventController::class, 'contact']);
 Route::get('/products', [EventController::class, 'products']);
 
 Route::get('/products/{id}', [EventController::class, 'product']);
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});

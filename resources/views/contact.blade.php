@@ -74,4 +74,8 @@
   71 php artisan migrate:status
   74 npm install
   75 npm run dev
+  5 php artisan make:migration add_user_id_to_events_table
+  6 php artisan migrate:fresh
+  7 git add .
+  8 git commit -m 'feat: adc middleware'
 } -->

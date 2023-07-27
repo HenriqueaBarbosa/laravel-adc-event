@@ -40,7 +40,7 @@
     <div class="form-group">
       <label for="title">Adicione itens de infraestrutura:</label>
       <div class="form-group">	
-        <input type="checkbox" name="items[]" value="Cadeiras"> Cadeiras
+        <input type="checkbox" name="items[]" value="Cadeiras" checked> Cadeiras
       </div>
       <div class="form-group">	
         <input type="checkbox" name="items[]" value="Palco"> Palco

@@ -10,19 +10,19 @@
             @csrf
             <div class="form-group">
                 <label for="image">Imagem do evento:</label>
-                <input type="file" class="form-control-file" id="image" name="image">
+                <input type="file" class="form-control-file" id="image" name="image" required>
             </div>
             <div class="form-group">
                 <label for="title">Evento:</label>
-                <input type="text" class="form-control" id="title" name="title" placeholder="Nome do evento">
+                <input type="text" class="form-control" id="title" name="title" placeholder="Nome do evento" required>
             </div>
             <div class="form-group">
                 <label for="date">Data do evento:</label>
-                <input type="date" class="form-control" id="date" name="date">
+                <input type="date" class="form-control" id="date" name="date" required>
             </div>
             <div class="form-group">
                 <label for="title">Cidade:</label>
-                <input type="text" class="form-control" id="city" name="city" placeholder="Local do evento">
+                <input type="text" class="form-control" id="city" name="city" placeholder="Local do evento" required>
             </div>
             <div class="form-group">
                 <label for="title">O evento é privado?</label>
@@ -33,12 +33,12 @@
             </div>
             <div class="form-group">
                 <label for="title">Description:</label>
-                <textarea name="description" id="description" class="form-control" placeholder="O que vai acontecer no evento?"></textarea>
+                <textarea name="description" id="description" class="form-control" placeholder="O que vai acontecer no evento?" required></textarea>
             </div>
             <div class="form-group">
                 <label for="title">Adicione itens de infraestrutura:</label>
                 <div class="form-group">	
-                    <input type="checkbox" name="items[]" value="Cadeiras"> Cadeiras
+                    <input type="checkbox" name="items[]" value="Cadeiras" checked> Cadeiras
                 </div>
                 <div class="form-group">	
                     <input type="checkbox" name="items[]" value="Palco"> Palco

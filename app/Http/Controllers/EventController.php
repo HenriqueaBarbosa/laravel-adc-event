@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Models\Event;
 use App\Models\User;
@@ -101,9 +102,13 @@ class EventController extends Controller {
     }
 
     public function edit($id) {
+
         $event = Event::findOrFail($id);
 
+        $event->date = Carbon::parse($event->date);
+
         return view('events.edit', ['event' => $event]);
+
     }
 
     public function update(Request $request) {
@@ -113,21 +118,32 @@ class EventController extends Controller {
         // Image Upload
         if($request->hasFile('image') && $request->file('image')->isValid()) {
 
-            $requestImage = $request->image;
+            $requestImage = $request->file('image');
 
             $extension = $requestImage->extension();
 
-            $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
+            $imageName = md5($requestImage->getClientOriginalName() . strtotime(now()) . "." . $extension);
 
             $requestImage->move(public_path('img/events'), $imageName);
 
             $data['image'] = $imageName;
-
-        }
+        }     
 
         Event::findOrFail($request->id)->update($data);
 
         return redirect('/dashboard')->with('msg', 'Evento editado com sucesso!');
+
+    }
+
+    public function joinEvent($id) {
+
+        $user = auth()->user();
+
+        $user->eventsAsParticipant()->attach($id);
+
+        $event = Event::findOrFail($id);
+
+        return redirect('/dashboard')->with('msg', 'Sua presença está confirmada no evento ' . $event->title);
 
     }
 

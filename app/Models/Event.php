@@ -15,10 +15,14 @@ class Event extends Model
 
     protected $dates = ['date'];
 
+    protected $guarded = [];
+
     public function user() {
         return $this->belongsTo('App\Models\User');
     }
 
-    protected $guarded = [];
+    public function users() {
+        return $this->belongsToMany('App\Models\User');
+    }
 }
 // php artisan make:model Event

@@ -42,6 +42,18 @@ header {
     padding: 0.625rem;
 }
 
+#info-container .already-joined-msg {
+    margin: 0.9375rem 0; /* 15px */
+    color: #004085;
+    background-color: #cce5ff;
+    border: 0.0625rem solid #b8daff; /* 1px */
+    padding: 0.625rem; /* 10px */
+    width: 17.1875rem; /* 275px */
+    border-radius: 0.625rem; /* 1px */
+    display: flex;
+    justify-content: center;
+}
+
 /* navbar */
 #navbar img {
     width: 2.5rem; /* 40px converted to rem */
@@ -50,7 +62,7 @@ header {
 #navbar {
     justify-content: space-between;
     background-color: #fff;
-    padding: 0.3125rem 0; /* 5px converted to rem */
+    padding: 0 0.6250rem; /* 10px converted to rem */
 }
 
 #navbar a {
@@ -149,6 +161,7 @@ header {
 #image-container,
 #info-container {
     margin-top: 1.875rem; /* 30px convertido para rem */
+    margin-bottom: 1.875rem; /* 30px convertido para rem */
 }
 
 #image-container img {
